@@ -1,0 +1,4 @@
+haystack-ai==2.1.1
+llama-cpp-python
+llama-cpp-haystack
+sentence-transformers==2.7.0
