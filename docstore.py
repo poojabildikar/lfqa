@@ -9,7 +9,7 @@ from haystack.components.embedders import SentenceTransformersTextEmbedder, Sent
 import os
 import logging
 
-DATA_DIRECTORY = 'data'
+DATA_DIRECTORY = 'data\in-english'
 
 # Set up logging
 logging.basicConfig(level=logging.DEBUG)
