@@ -1,7 +1,7 @@
 ## Docstore - Opensearch
 ## Semantic matching for document search using SentenceTransformersDocumentEmbedder
 
-from haystack.document_stores.opensearch import OpenSearchDocumentStore
+from haystack_integrations.document_stores.opensearch import OpenSearchDocumentStore
 from haystack.document_stores.types import DuplicatePolicy
 from haystack import Document
 from haystack.components.embedders import SentenceTransformersTextEmbedder, SentenceTransformersDocumentEmbedder
@@ -44,8 +44,7 @@ documents_with_embeddings = document_embedder.run(documents)
 document_store = OpenSearchDocumentStore(
     host="localhost",
     port="9200",
-    username="admin",
-    password="Portex@5326",
+    http_auth=("admin","Portex@5326"),
     index="document",
     scheme="https",
     verify_certs=False

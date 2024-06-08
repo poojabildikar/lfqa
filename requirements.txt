@@ -1,4 +1,5 @@
 haystack-ai==2.1.1
+opensearch-haystack
 llama-cpp-python
 llama-cpp-haystack
 sentence-transformers==2.7.0
