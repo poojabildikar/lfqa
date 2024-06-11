@@ -43,3 +43,5 @@ def answer(question):
 
     print('Question: ', question + '\n')
     print('Answer: ', response["llm"]["replies"][0])
+
+#answer('What is Career Margadarshak?')

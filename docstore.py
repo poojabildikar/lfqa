@@ -40,14 +40,16 @@ embedding_model="sentence-transformers/all-MiniLM-L6-v2"
 document_embedder = SentenceTransformersDocumentEmbedder(model=embedding_model)  
 document_embedder.warm_up()
 documents_with_embeddings = document_embedder.run(documents)
+#print(documents_with_embeddings.get("documents")[0])
 
 document_store = OpenSearchDocumentStore(
     host="localhost",
     port="9200",
     http_auth=("admin","Portex@5326"),
-    index="document",
+    index="initial",
     scheme="https",
-    verify_certs=False
+    verify_certs=False,
+    embedding_dim=384
 )
 
 document_store.write_documents(documents_with_embeddings.get("documents"), policy=DuplicatePolicy.SKIP)
